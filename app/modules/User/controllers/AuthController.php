@@ -32,7 +32,7 @@ class AuthController extends Controller {
             return redirect()->intended('user');
         }
 
-        return redirect('user/login')
+        return redirect('auth/login')
         	->withInput($request->only('email'))
         	->withErrors([
         		'email'=>'Lietotājs neeksistē vai bija ievadīta neparaiza parole'

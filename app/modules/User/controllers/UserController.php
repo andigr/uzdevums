@@ -46,27 +46,6 @@ class UserController extends Controller {
 		return redirect('user');
 	}
 
-	public function authenticate(Request $request)
-	{
-		$this->validate($request, [
-			'email'=>'required',
-			'password'=>'required',
-		], $this->messages());
-
-		$input = $request->all();
-
-		if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']]))
-        {
-            return redirect()->intended('user');
-        }
-
-        return redirect('user/login')
-        	->withInput($request->only('email'))
-        	->withErrors([
-        		'email'=>'Lietotājs neeksistē vai bija ievadīta neparaiza parole'
-        	]);
-	}
-
 	function user_by_email(Request $request)
 	{
 		$input = $request->all();
