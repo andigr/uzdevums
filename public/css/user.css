@@ -1,0 +1,36 @@
+.container {
+	width: 1000px;
+	margin: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.form-group {
+	margin-bottom: 20px;
+}
+.form-group:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+.form-left, .form-right {
+	float: left;
+	width: 200px;
+}
+.fomr-left {
+	width: 150px;
+}
+input[type="submit"] {
+	background-color: #eee;
+  	background-image: none;
+  	border: 1px solid black;
+  	padding: 5px 25px;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	margin-right: 20px;
+}
+.errors {
+	color: red;
+}
+input.error {
+	border-color: red;
+}
